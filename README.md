@@ -13,14 +13,14 @@ Se requiere tener instalado docker y docker-compose para poder ejecutar este pro
 # Configuración
 Sustituir el apikey que otorga la página www.currencyconverterapi.com para su api. El archivo donde se debe hacer esta sustitución es en la carpeta del proyecto y la ruta es: ./clickbus/public/js/config.js
 
-el contenido original del archivo es:
+El contenido original del archivo es:
 
 ```javascript
 var config = {
 	apikey: '< HERE YOUR KEY >'
 }
 ```
-se debe sustituir la cadena "< HERE YOUR KEY >" por el valor del apikey, ejemplo:
+Se debe sustituir la cadena "< HERE YOUR KEY >" por el valor del apikey, ejemplo:
 
 ```javascript
 var config = {
@@ -35,7 +35,7 @@ En la carpeta del proyecto ejecutar los siguientes comandos:
 docker-compose build
 docker-compose up &
 ```
-una vez levantado el ambiente, se debe entrar en el contenedor de PHP, para instalar las dependencias del proyecto, para esto usamos los siguientes comandos:
+Una vez levantado el ambiente, se debe entrar en el contenedor de PHP, para instalar las dependencias del proyecto, para esto usamos los siguientes comandos:
 
 ```bash
 docker exec -it clickbus_test_php_1 bash
@@ -44,7 +44,7 @@ composer install
 ```
 > Nota: En caso de cambiar el nombre de la carpeta del repositorio se debe cambiar el comando para entrar en el contenedor de PHP de la siguiente manera:
 
-> docker exec -it <Nombre de la carpeta>_php_1 bash
+> docker exec -it Nombre_de_la_carpeta_php_1 bash
 
 Una vez instaladas las dependencias revisamos el archivo de configuración de symfony.
 
