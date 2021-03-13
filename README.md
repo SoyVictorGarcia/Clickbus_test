@@ -8,7 +8,9 @@ Este es un proyecto de prueba diseñado como un ejemplo simple de una aplicacion
 * docker
 
 # Configuración
-Sustituir el apikey que otorga la pagina www.currencyconverterapi.com para su api. El archivo donde se debe hacer esta sustitucion es: /clickbus/public/js/config.js
+Sustituir el apikey que otorga la pagina www.currencyconverterapi.com para su api. El archivo donde se debe hacer esta sustitucion es en la carpta del proyecto y la ruta es: ./clickbus/public/js/config.js
+
+el contenido original del archivo es:
 
 ```javascript
 var config = {
