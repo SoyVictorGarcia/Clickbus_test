@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+{% block title %}Historico de operaciones{% endblock %}
+{% block body %}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID de operacion</th>
+                    <th scope="col">Moneda Origen</th>
+                    <th scope="col">Moneda Cambio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Valor de conversión</th>
+                    <th scope="col">Valor de la operación</th>
+                    <th scope="col">Fecha de creación</th>
+                    <th scope="col">Fecha de actualización</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for operation in pagination %}
+                    <tr>
+                        <td>{{ operation.getOperationUuid() }}</td>
+                        <td>{{ operation.getFromCurrency() }}</td>
+                        <td>{{ operation.getToCurrency() }}</td>
+                        <td>{{ operation.getAmount() }}</td>
+                        <td>{{ operation.getConvertedValue() }}</td>
+                        <td>{{ operation.getConvertedValue()*operation.getAmount() }}</td>
+                        <td>{{ operation.getCreatedAt() | date('Y/m/d H:i:s') }}</td>
+                        <td>{{ operation.getUpdatedAt() | date('Y/m/d H:i:s') }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination, 'paginator.html.twig') }}
+        </div>
+    </div>
+{% endblock %}
+

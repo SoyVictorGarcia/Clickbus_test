@@ -1,0 +1,5 @@
+vendor/
+click_bus/vendor
+click_bus/var/cache/*
+click_bus/var/log/*
+click_bus/.env
