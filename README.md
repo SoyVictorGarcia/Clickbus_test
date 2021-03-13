@@ -1,5 +1,5 @@
 # Proyecto test clickbus 
-Este es un proyecto de prueba diseñado como un ejemplo simple de una aplicacion con las siguientes tecnologias:
+Este es un proyecto de prueba diseñado como un ejemplo simple de una aplicación con las siguientes tecnologías:
 * php, Symfony
 * jquery
 * bootstrap
@@ -11,7 +11,7 @@ Este es un proyecto de prueba diseñado como un ejemplo simple de una aplicacion
 Se requiere tener instalado docker y docker-compose para poder ejecutar este proyecto.
 
 # Configuración
-Sustituir el apikey que otorga la pagina www.currencyconverterapi.com para su api. El archivo donde se debe hacer esta sustitución es en la carpeta del proyecto y la ruta es: ./clickbus/public/js/config.js
+Sustituir el apikey que otorga la página www.currencyconverterapi.com para su api. El archivo donde se debe hacer esta sustitución es en la carpeta del proyecto y la ruta es: ./clickbus/public/js/config.js
 
 el contenido original del archivo es:
 
@@ -35,17 +35,17 @@ En la carpeta del proyecto ejecutar los siguientes comandos:
 docker-compose build
 docker-compose up &
 ```
-una vez levantado el ambiente,se debe entrar en el contenedor de php, para instalar las dependencias del proyecto, para esto usamos los siguientes comandos:
+una vez levantado el ambiente, se debe entrar en el contenedor de PHP, para instalar las dependencias del proyecto, para esto usamos los siguientes comandos:
 
 ```bash
 docker exec -it clickbus_test_php_1 bash
 cd /app/click_bus/
 composer install
 ```
-Nota: En caso de cambiar el nombre de la carpeta del repositorio se debe cambiar el comando para entrar en el contenedor de php de la siguiente manera:
+> Nota: En caso de cambiar el nombre de la carpeta del repositorio se debe cambiar el comando para entrar en el contenedor de PHP de la siguiente manera:
 
-```bash
-docker exec -it <Nombre de la carpeta>_php_1 bash
+> ```bash
+ docker exec -it <Nombre de la carpeta>_php_1 bash
 ```
 
 Una vez instaladas las dependencias revisamos el archivo de configuración de symfony.
@@ -74,7 +74,7 @@ Ya creada la base de datos, ingresamos al sitio usando la siguiente url en el na
 ```plaintext
 url: http://localhost:8080/
 ```
-En caso de que docker no este funcionando en linux directamente o el localhost no este mapeado con docker (nuevas versiones), usar la ip de la maquina virtual de docker (virtualbox) o la ip de la interfaz de red conectada a internet
+En caso de que docker no este funcionando en linux directamente o el localhost no este mapeado con docker (nuevas versiones), usar la ip de la máquina virtual de docker (virtualbox) o la ip de la interfaz de red conectada a internet
 
 ```plaintext
 url: http://<IP DOCKER MACHINE>:8080/
