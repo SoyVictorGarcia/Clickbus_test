@@ -44,9 +44,7 @@ composer install
 ```
 > Nota: En caso de cambiar el nombre de la carpeta del repositorio se debe cambiar el comando para entrar en el contenedor de PHP de la siguiente manera:
 
-> ```bash
- docker exec -it <Nombre de la carpeta>_php_1 bash
-```
+> docker exec -it <Nombre de la carpeta>_php_1 bash
 
 Una vez instaladas las dependencias revisamos el archivo de configuración de symfony.
 
